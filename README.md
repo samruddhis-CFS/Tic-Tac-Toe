@@ -1,97 +1,49 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Tic-Tac-Toe App (React Native)
+This project is a simple, interactive Tic Tac Toe game built using React Native. It allows two players to take turns marking X and O in a 3x3 grid. The app features smooth UI components and basic game logic, making it a great starting point for understanding React Native concepts.
 
-# Getting Started
+ Features
+ Interactive 3x3 game board
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+ Alternating turns between Player X and Player O
 
-## Step 1: Start Metro
+ "Reset Game" button to clear the board and start over
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+ Simple and clean UI with responsive touch controls
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+🛠 Technologies Used
+React Native for cross-platform mobile development
 
-```sh
-# Using npm
-npm start
+TypeScript for type safety and better code clarity
 
-# OR using Yarn
-yarn start
-```
+Functional Components and Hooks (useState) for state management
 
-## Step 2: Build and run your app
+TouchableOpacity and SafeAreaView from React Native core for UI layout and interaction
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+ Code Breakdown
+ App Component
+State Variables:
 
-### Android
+board: A 3x3 array representing the game grid.
 
-```sh
-# Using npm
-npm run android
+currentPlayer: Tracks which player's turn it is (X or O).
 
-# OR using Yarn
-yarn android
-```
+Functions:
 
-### iOS
+handlePress(row, col): Updates the board if the tapped cell is empty, and switches the player.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+resetGame(): Clears the board and resets the player to X.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+UI Structure:
 
-```sh
-bundle install
-```
+A title (Tic Tac Toe) and current player's turn display.
 
-Then, and every time you update your native dependencies, run:
+A 3x3 grid built using map() loops and TouchableOpacity for each cell.
 
-```sh
-bundle exec pod install
-```
+A reset button styled with StyleSheet to restart the game.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+ How It Works
+When a player taps a cell, the handlePress function updates that cell with X or O.
 
-```sh
-# Using npm
-npm run ios
+The app automatically switches turns after each move.
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+The Reset Game button clears the board and starts a new game with Player X.
